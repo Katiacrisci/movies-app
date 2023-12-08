@@ -1,0 +1,20 @@
+<h1 class="text-center">I nostri prodotti</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-5"></div>
+        <div class="col-2">
+        </div>
+        <div class="col-5"></div>
+    </div>
+    <div class=" row">
+        <div class="col-12">
+            <ul class="list-group">
+                <li class="list-group-item" *ngFor="let movie of movies">
+                    Codice prodotto: {{movie.id}}<br>
+                    <span class="prodotti">Nome prodotto: {{movie.title}}</span><br>
+                    Prezzo: &euro; {{movie.poster_path}}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

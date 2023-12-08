@@ -44,6 +44,7 @@ export class AuthService {
     }
     const userData: AuthData = JSON.parse(user);
     if (this.jwtHelper.isTokenExpired(userData.accessToken)) {
+      console.warn("token expired");
       this.router.navigate(['/login']);
       return;
     }
