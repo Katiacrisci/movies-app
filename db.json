@@ -5,6 +5,13 @@
       "password": "$2a$10$ZLY63quWnMVo0lO951uFdOJRfUxeo8U6YJ/Cue06Vgp4Ad8S/CjaC",
       "name": "Dario",
       "id": 2
+    },
+    {
+      "email": "katia@katia.com",
+      "password": "$2a$10$yE2i5YcFLPweYqbDoY2KtuLdx2y3q.KXuoHTop0WNe9D6jW7yIpMO",
+      "nome": "Caterina",
+      "cognome": "crisci",
+      "id": 3
     }
   ],
   "favorites": [
@@ -17,6 +24,16 @@
       "userId": 2,
       "movieId": 632357,
       "id": 8
+    },
+    {
+      "userId": 3,
+      "movieId": 635302,
+      "id": 9
+    },
+    {
+      "userId": 3,
+      "movieId": 823855,
+      "id": 10
     }
   ],
   "movies-popular": [
