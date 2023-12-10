@@ -1,20 +1,39 @@
-<h1 class="text-center">I nostri prodotti</h1>
+<h1 class="text-center mb-3">Popular movies</h1>
 <div class="container">
-    <div class="row">
-        <div class="col-5"></div>
-        <div class="col-2">
+  <div class="row">
+    <div class="col-5"></div>
+    <div class="col-2"></div>
+    <div class="col-5"></div>
+  </div>
+  <div class="row row-cols-4 g-4">
+    <div class="col" *ngFor="let movie of movies">
+      <div class="card h-100">
+        <img
+          src="http://image.tmdb.org/t/p/w500{{ movie.poster_path }}"
+          class="card-img-top"
+          alt="{{ movie.title }}"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ movie.title }}</h5>
+          <div class="d-flex justify-content-between">
+            <a href="#" class="btn btn-primary">Movie Plot</a>
+            <button
+              style="background-color: transparent; border: none"
+              (click)="toggleUserFavorite(movie.id, movie.favId)"
+            >
+              <fa-icon
+                *ngIf="movie.isUserFavorite; else noFav"
+                style="color: red"
+                [icon]="regularHeart"
+              ></fa-icon>
+            </button>
+          </div>
         </div>
-        <div class="col-5"></div>
+      </div>
     </div>
-    <div class=" row">
-        <div class="col-12">
-            <ul class="list-group">
-                <li class="list-group-item" *ngFor="let movie of movies">
-                    Codice prodotto: {{movie.id}}<br>
-                    <span class="prodotti">Nome prodotto: {{movie.title}}</span><br>
-                    Prezzo: &euro; {{movie.poster_path}}
-                </li>
-            </ul>
-        </div>
-    </div>
+  </div>
 </div>
+
+<ng-template #noFav>
+  <fa-icon [icon]="regularHeart"></fa-icon>
+</ng-template>
